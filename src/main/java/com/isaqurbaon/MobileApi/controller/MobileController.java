@@ -1,15 +1,20 @@
 package com.isaqurbaon.MobileApi.controller;
 
 import com.isaqurbaon.MobileApi.entity.Student;
+import com.isaqurbaon.MobileApi.mock.MockDB;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class MobileController {
-    Student student1 = new Student(1L, "Isa", 20);
+    private final MockDB db;
 
-    @GetMapping("greet")
-    public Student greet() {
-        return student1;
+
+    @GetMapping("student/{id}")
+    public Student greet(@PathVariable Long id) {
+        return db.findById(id);
     }
 }
