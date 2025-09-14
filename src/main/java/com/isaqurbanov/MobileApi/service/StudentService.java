@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -14,6 +15,10 @@ import java.util.Optional;
 public class StudentService {
 
     private final StudentRepository studentRepository;
+
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
 
     public Student getStudentById(Long id) {
         Optional<Student> op = studentRepository.findById(id);
@@ -25,5 +30,4 @@ public class StudentService {
         studentRepository.save(student);
         return ResponseEntity.ok("Student saved to Data Base");
     }
-
 }
