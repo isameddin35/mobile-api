@@ -1,4 +1,4 @@
-package com.isaqurbaon.MobileApi;
+package com.isaqurbanov.MobileApi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

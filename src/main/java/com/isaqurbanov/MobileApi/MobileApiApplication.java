@@ -1,4 +1,4 @@
-package com.isaqurbaon.MobileApi;
+package com.isaqurbanov.MobileApi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MobileApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MobileApiApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MobileApiApplication.class, args);
+    }
 
 }
