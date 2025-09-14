@@ -30,6 +30,13 @@ public class MobileController {
         return studentService.saveStudent(student);
     }
 
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteStudent(@PathVariable Long id) {
+        return studentService.deleteStudent(id);
+    }
 
-
+    @DeleteMapping
+    public ResponseEntity<String> deleteAllStudents() {
+        return studentService.deleteAllStudents();
+    }
 }

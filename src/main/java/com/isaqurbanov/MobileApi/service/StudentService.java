@@ -30,4 +30,15 @@ public class StudentService {
         studentRepository.save(student);
         return ResponseEntity.ok("Student saved to Data Base");
     }
+
+    public ResponseEntity<String> deleteStudent(Long id) {
+        studentRepository.deleteById(id);
+        return ResponseEntity.ok("Student deleted successfully");
+    }
+
+    public ResponseEntity<String> deleteAllStudents() {
+        studentRepository.deleteAll();
+        return ResponseEntity.ok("All Students Deleted");
+    }
+
 }
